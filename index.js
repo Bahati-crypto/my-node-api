@@ -11,7 +11,7 @@ app.get('/', (req, res) => {
 app.post('/api/login', (req, res) => {
     const { username, password } = req.body;
     if (username === 'admin' && password === 'password123') {
-        return res.status(200).json({ message: "Login successful!", token: "fake-jwt-token" });
+        return res.status(200).json({ message: "Login successful! Dynamic deployment complete via Jenkins & Docker.", token: "new-jwt-token-v2" });
     }
     return res.status(401).json({ message: "Invalid credentials" });
 });
